@@ -41,7 +41,7 @@ const SideMenu = () => {
                                     onClick={() => setExpandedIndex(expandedIndex === id ? null : id)}
                                     data-test-id={`button-${item.title.toLowerCase()}`}
                                 >
-                                    {expandedIndex === id ? 'Expand' : 'Hide'}
+                                    {expandedIndex === id ? 'Hide' : 'Expand'}
                                 </button>
                                 {expandedIndex === id && (
                                     <ul data-test-id={`ul-${item.title.toLowerCase()}`}>

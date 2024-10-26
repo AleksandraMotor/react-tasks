@@ -1,4 +1,4 @@
-#Tasks 1
+# Task 1 - Side Menu
 
 Implement a React component thet renders a dynamic and expandable side-menu-like list of items.
 
@@ -18,15 +18,19 @@ Implement a React component thet renders a dynamic and expandable side-menu-like
         },
     ];
 
-<!-- The type of menuConfig is MenuConfig. Both MenuItem and MenuConfig are defined at the beginning of the file and appear as follows: -->
+The type of menuConfig is MenuConfig. Both MenuItem and MenuConfig are defined at the beginning of the file and appear as follows:
 
-<!-- type MenuItem = {
-title: string;
-subItems?: Array<string>;
-};
+### type MenuItem = {
+### title: string;
+### subItems?: Array<string>;
+### };
 
-type MenuConfig = Array<MenuItem>; -->
+### type MenuConfig = Array<MenuItem>;
 
 3. Every menu item should be displayed inside a separate corresponding div. This div should have a dynamically created attribute, data-test-id, in the form: first-level-{lowercase-title-name-here}. So for example, if some MenuItem contained a title named Home, the div should have a data-test-id containing first-level-home.
+
+4. Every `div` fro previous point should contin within it:
+- `title` for exemple, for a `MenuItem` with title `Home` should appear in this `div 
+- `button` with dynamic `data-test-id` in the form: `button-{lowercase-title-name-here}` (for example `button-home`).
 
 5. Only one submenu should be in the expanded state at any time. If one of the submenus is open and then some other menu item button is clicked, the previouslu expanded submenu should be hidden and the new one should sppear.
